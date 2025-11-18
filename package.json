@@ -13,14 +13,9 @@
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "next": "15.0.3",
     "@babel/core": "^7.17.9",
-    "@sanity/client": "^3.2.0",
-    "@sanity/image-url": "^1.0.1",
-    "@stripe/stripe-js": "^1.25.0",
     "canvas-confetti": "^1.5.1",
-    "next-sanity-image": "^3.2.1",
     "react-hot-toast": "^2.2.0",
     "react-icons": "^4.3.1",
-    "stripe": "^8.209.0"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.16.7",
