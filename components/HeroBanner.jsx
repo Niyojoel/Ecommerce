@@ -21,7 +21,7 @@ const HeroBanner = ({image, desc, product, buttonText, smallText, midText, large
          </Link>
         <div className="whitebox-style"/>
 
-        <div>
+        <div className="action_btn">
             <Link href={`/product/${product}`}> 
                 <button type="button">
                     {buttonText}

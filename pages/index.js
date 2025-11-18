@@ -18,19 +18,21 @@ const Home = (/*{productss, bannerData}*/) => {
         </div>
         <ProductsFilter />
         <div className="products-container">
-          {products.length ? (
-            products?.map((product) => {
-              return <Product key={product.id} product={product} />;
-            })
-          ) : (
-            <p>
-              {`No available item for ${
-                filterTerms.brandName !== "all" ? filterTerms.brandName : ""
-              } ${filterTerms.category !== "all" ? filterTerms.category : ""}`}
-            </p>
-          )}
+          <div className="product_wrapper">
+            {products.length ? (
+              products?.map((product) => {
+                return <Product key={product.id} product={product} />;
+              })
+            ) : (
+              <p>
+                {`No available item for ${
+                  filterTerms.brandName !== "all" ? filterTerms.brandName : ""
+                } ${filterTerms.category !== "all" ? filterTerms.category : ""}`}
+              </p>
+            )}
+          </div>
         </div>
-        <Pagination/>
+        <Pagination />
       </section>
       <FooterBanner footerBanner={footerBanner} />
     </main>

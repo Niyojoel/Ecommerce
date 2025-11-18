@@ -41,7 +41,7 @@ export const ProductProvider = ({children})=> {
     function paginationControl () {
         const pagination = (products)=> {
             const pagProduct = [...products]
-            let limit = 10;
+            let limit = 12;
             let skip = (page - 1) * limit;
             let lastPage = Math.ceil(products.length/limit);
             setLastPage(lastPage);
