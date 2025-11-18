@@ -15,7 +15,7 @@
     "@babel/core": "^7.17.9",
     "canvas-confetti": "^1.5.1",
     "react-hot-toast": "^2.2.0",
-    "react-icons": "^4.3.1",
+    "react-icons": "^4.3.1"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.16.7",
