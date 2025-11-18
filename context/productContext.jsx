@@ -40,13 +40,13 @@ export const ProductProvider = ({children})=> {
 
     function paginationControl () {
         const pagination = (products)=> {
-            const pagProduct = [...products]
+            const productToPaginate = [...products]
             let limit = 12;
             let skip = (page - 1) * limit;
             let lastPage = Math.ceil(products.length/limit);
             setLastPage(lastPage);
             let sliceEnd  = page < lastPage ? page * limit : products.length;
-            return pagProduct.slice(skip, sliceEnd);
+            return productToPaginate.slice(skip, sliceEnd);
         }
     
         const changePage = (direction) => {
@@ -152,24 +152,15 @@ export const ProductProvider = ({children})=> {
 
                 if(brandName !=="all") {
                     checkArr = checkArr.filter((product)=> product.name.includes(brandName))
-                    console.log(checkArr)
 
                 }
                 if(category !=="all") {
                     checkArr = checkArr.filter((product)=> product.category === category)
-                    console.log(checkArr)
 
                 }
                 return checkArr;
             });
         }
-
-        const sortProductsByName = () => {
-            setProductList( prev => {
-            const checkArr = [...prev];
-            return checkArr.sort((a, b)=> a.name.localeCompare(b.name))
-            });
-        };
         
         const sortProductsByPrice = (type) => {
             setProductList( prev => {
@@ -182,8 +173,13 @@ export const ProductProvider = ({children})=> {
                 return checkArr;
             });
         };
-        return {filterProducts, sortProductsByName, sortProductsByPrice}
+        return {filterProducts, sortProductsByPrice}
     };
+
+    const defaultProductsDisplay = () => {
+        setFilterTerms({brandNames: "", category: ""})
+        setProductList(products_);
+    }
 
     const {pagination, changePage}= paginationControl ();
 
@@ -191,7 +187,8 @@ export const ProductProvider = ({children})=> {
         setProducts(pagination(productList));
     },[page, productList]);
 
-    return <ProductContext.Provider value={{products, brandNames, categories, page,setPage, lastPage, priceSortingRef, productFilterRef, productFilterAndSorting, filterTerms, changePage, cart, totalPrice, totalQty, productInCart, showCart, setShowCart, productList}}>
+
+    return <ProductContext.Provider value={{products, brandNames, categories, page, setPage, lastPage, priceSortingRef, productFilterRef, productFilterAndSorting, defaultProductsDisplay, filterTerms, changePage, cart, totalPrice, totalQty, productInCart, showCart, setShowCart, productList}}>
         {children}
     </ProductContext.Provider>
 }

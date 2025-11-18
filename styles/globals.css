@@ -22,14 +22,9 @@ a {
   width: 100%;
 }
 
-.layout{
-  /* padding: 10px; */
-}
-
 .navbar-container{
   max-width: 1200px;
   width: 100%;
-  /* background-color: rgba(241, 241, 241, 0.5); */
   display: flex;
   justify-content: space-between;
   place-items: center;
@@ -121,7 +116,7 @@ span.text-red {
 .product-section {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
   align-items: center;
   width: 100%;
 }
@@ -136,7 +131,7 @@ span.text-red {
 
 .products-showings, .pagination {
   width: 100%;
-  max-width: 600px;
+  max-width: 650px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1036,8 +1031,8 @@ padding: 30px 65px;
   }
 
   .footer-banner-imgbox {
-    top: -35%;
-    left: 8%;
+    top: -40%;
+    left: 0%;
     width: 300px;
     height: 300px;
   }
@@ -1065,7 +1060,7 @@ padding: 30px 65px;
   }
 
   .product-section {
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .products-showings, .pagination {
@@ -1132,6 +1127,14 @@ padding: 30px 65px;
   .product-detail-desc .price {
     font-size: 1.6rem;
   }
+
+  .banner-desc .right h3 {
+    font-size: 50px;
+  }
+
+  .banner-desc .left h3 {
+    font-size: 65px;
+  }
 }
 
 @media screen and (max-width:680px) {
@@ -1172,11 +1175,6 @@ padding: 30px 65px;
   .footer-banner-container{
     height: max-content;
   }
-
-  /* .footer-banner-imgbox {
-    top: -20%;
-    left: 0%;
-  } */
   
   .banner-desc .left h3{
     font-weight: 900;
@@ -1295,6 +1293,11 @@ padding: 30px 65px;
     width: 300px;
     margin: auto;
   }
+
+  .footer-banner-imgbox {
+    width: 270px;
+    height: 270px;
+  }
 }
 
 @media screen and (max-width:574px){
@@ -1317,15 +1320,22 @@ padding: 30px 65px;
     justify-content: center;
   }
 
-  .footer-banner-imgbox {
-    width: 270px;
-    height: 270px;
-    top: -22%;
-    left: 30%;
-  }
-
   .banner-desc {
     flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 555.20px) {
+  .footer-banner-imgbox {
+    top: -38%;
+    /* left: 0%; */
+  }
+}
+
+@media screen and (max-width: 555.40px) {
+  .footer-banner-imgbox {
+    top: -22%;
+    /* left: 0%; */
   }
 }
 

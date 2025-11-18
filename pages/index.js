@@ -1,12 +1,16 @@
 import { bannerContent } from "@/data/data";
 import { HeroBanner, Product, FooterBanner, ProductsFilter, Pagination } from "@/components";
 import { useProductContext } from "@/context/productContext";
-// import {client} from "../lib/client";
+import { useEffect } from "react";
 
 const Home = (/*{productss, bannerData}*/) => {
   const {heroBanner, footerBanner}= bannerContent;
 
-  const {products, filterTerms} = useProductContext();
+  const {products, filterTerms, defaultProductsDisplay} = useProductContext();
+
+  useEffect(()=> {
+    defaultProductsDisplay()
+  }, [])
 
   return (
     <main className="page">
@@ -14,7 +18,7 @@ const Home = (/*{productss, bannerData}*/) => {
       <section className="product-section">
         <div className="products-heading">
           <h2>Best Selling Items</h2>
-          <p>Fashion in Diverse Styles Variations</p>
+          <p>Fashion in Diverse Styles and Variations</p>
         </div>
         <ProductsFilter />
         <div className="products-container">
