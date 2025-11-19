@@ -30,7 +30,7 @@ const ProductDetails = () => {
       (product) => product.name === slug?.split("_").join(" ")
     );
     setProduct(product_);
-  },[pathname])
+  },[pathname, productList])
 
   console.log(product)
     
@@ -51,6 +51,7 @@ const ProductDetails = () => {
             <div className="small-images-container">
               {product?.images.map((img, i) => (
                 <Image
+                  key={i}
                   src={img}
                   alt="product-image"
                   width={70}
