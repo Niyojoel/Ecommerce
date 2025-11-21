@@ -2,7 +2,7 @@
 import { useProductContext } from "@/context/productContext"
 import { useEffect } from "react";
 
-const productsFilter = () => {
+const ProductsFilter = () => {
     const {brandNames, categories, priceSortingRef, productFilterAndSorting, productFilterRef} = useProductContext();
 
     const {filterProducts, sortProductsByName, sortProductsByPrice} = productFilterAndSorting()
