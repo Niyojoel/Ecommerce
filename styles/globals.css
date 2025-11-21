@@ -172,6 +172,7 @@ span.text-red {
   border: none;
   outline: none;
   border-radius: 2px;
+  font-size: 0.9rem;
   transition: all 200ms ease-in;
 }
 
@@ -245,7 +246,6 @@ span.text-red {
   flex-direction: column;
   gap: 1rem;
   padding: 100px 40px;
-  /* background-color: rgb(220, 220, 220); */
   background: linear-gradient(to top, white -5%, rgb(200, 200, 200));
   border-radius: 15px;
   height: 700px;
@@ -889,6 +889,13 @@ padding: 30px 65px;
   }
 }
 
+@media screen and (max-width:1250px){
+  .navbar-container{
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+    }
+}
+
 @media screen and (max-width:1150px) {
   .hero-banner-container .style-text {
     font-size: 7.5rem;
@@ -1172,6 +1179,10 @@ padding: 30px 65px;
     display: none;
   }
 
+  .sort_paginate-btn {
+    font-size: 0.85rem;
+  } 
+
   .footer-banner-container{
     height: max-content;
   }
@@ -1312,6 +1323,14 @@ padding: 30px 65px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+  }
+
+  .pagination {
+    flex-wrap: nowrap;
+    justify-content: center;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .products-showings_wrapper {

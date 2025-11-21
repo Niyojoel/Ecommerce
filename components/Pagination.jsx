@@ -5,13 +5,14 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 const Pagination = () => {
   const {page, lastPage, changePage} = useProductContext();
 
+
   return (
     <div className='pagination'>
        {page > 1 && <button className="sort_paginate-btn paginate-btn" onClick={()=>changePage("prev")}>
             <AiOutlineArrowLeft/>
-            Previous
+            Prev.
         </button>}
-        <span>Page {page} of {lastPage} </span>
+        <span>Page {page}/{lastPage} </span>
         {page < lastPage && <button className="sort_paginate-btn paginate-btn" onClick={()=>changePage("next")}>
             Next
             <AiOutlineArrowRight/>
