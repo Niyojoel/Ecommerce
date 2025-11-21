@@ -42,4 +42,4 @@ const ProductsFilter = () => {
   )
 }
 
-export default productsFilter
+export default ProductsFilter
